@@ -1,11 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar'; 
+import HouseDetails from './HouseDetails';
+import Formulario from './Formulario';
+
+const house = {
+  area: 220,
+  barrio: "La Garzota",
+  precio: 220000,
+};
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" backgroundColor="#ffffff" />
+      <HouseDetails house={house} />
+       <Formulario /> 
     </View>
   );
 }
@@ -13,8 +23,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff', 
   },
 });
